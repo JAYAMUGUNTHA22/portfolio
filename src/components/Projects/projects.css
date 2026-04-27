@@ -1,0 +1,106 @@
+#projects {
+  padding: 60px 20px 80px;
+  background: #0e0e10;
+  text-align: center;
+}
+
+.projectsTitle {
+  font-size: 3rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 3rem;
+  letter-spacing: -0.02em;
+}
+
+.projectsTitle::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #00d4aa, #6c5ce7);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.75rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  justify-items: center;
+}
+
+.projectCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 0;
+  width: 100%;
+  max-width: 320px;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.projectCard:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0, 212, 170, 0.25);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(0, 212, 170, 0.1);
+}
+
+.projectImage {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 0;
+}
+
+.projectCard h3 {
+  padding: 1.25rem 1.25rem 0.5rem;
+  margin: 0;
+  text-align: left;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.projectDescription {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  margin: 0;
+  padding: 0 1.25rem;
+  line-height: 1.5;
+  min-height: 2.8em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-align: left;
+}
+
+.projectButtons {
+  display: flex;
+  justify-content: center;
+  padding: 1.25rem;
+}
+
+
+.projectCard .btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #00d4aa, #00b894);
+  color: #0d0d0d;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-decoration: none;
+}
+
+.projectCard .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 212, 170, 0.35);
+}

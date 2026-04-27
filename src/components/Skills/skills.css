@@ -1,0 +1,101 @@
+#skills {
+  padding: 60px 20px 80px;
+  background: #0a0a0c;
+}
+
+.skillsContainer {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skillsTitle {
+  font-size: 3rem;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  margin-bottom: 3rem;
+  letter-spacing: -0.02em;
+}
+
+.skillsTitle::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #00d4aa, #6c5ce7);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.skillBars {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.75rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  min-height: 140px;
+}
+
+.skillBars:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 212, 170, 0.35);
+  box-shadow: 0 12px 32px rgba(0, 212, 170, 0.12);
+}
+
+.skillBarImg {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  margin-bottom: 0.75rem;
+  opacity: 0.95;
+}
+
+.skillBarText h1 {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+@media screen and (max-width: 900px) {
+  .skillBarText h1 {
+    font-size: 0.9rem;
+  }
+  .skillsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .skillBarText h1 {
+    font-size: 0.85rem;
+  }
+  .skillsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .skillBars {
+    min-height: 120px;
+    padding: 1.25rem;
+  }
+  .skillBarImg {
+    width: 48px;
+    height: 48px;
+  }
+}

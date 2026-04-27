@@ -1,0 +1,157 @@
+#contactPage {
+  min-height: calc(100vh - 4rem);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  color: white;
+  animation: sectionReveal 0.7s ease-out;
+}
+
+@keyframes sectionReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MAIN WRAPPER */
+#contact{
+    max-width: 85rem;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    padding: 2rem 1.5rem;
+}
+
+/* LEFT SIDE */
+.contactLeft{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 32rem;
+}
+
+.contactPageTitle{
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle{
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.contactDesc{
+    font-size: 1.2rem;
+    font-weight: 300;
+    max-width: 28rem;
+    line-height: 1.5;
+}
+
+.emailRow{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 2rem 0 1.5rem;
+    font-size: 1.2rem;
+}
+
+/* ICONS */
+.links{
+    display: flex;
+    gap: 1rem;
+    margin-top: 20px;
+}
+
+.socialIcon{
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+/* RIGHT SIDE */
+.contactRight{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.contactForm{
+    width: 100%;
+    max-width: 34rem;  
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+    gap: 1rem;
+}
+
+/* INPUTS – SAME DARK THEME AS YOUR FIRST CSS */
+.name,
+.email,
+.msg{
+    width: 100%;
+    margin-top: 0.3rem;
+    padding: 0.6rem;
+    font-size: large;
+    color: white;
+    border: 1px solid #666;
+    border-radius: 0.3rem;
+    background: rgb(40, 40, 40);
+}
+
+label{
+    margin-top: 1rem;
+    font-size: 0.8rem;
+}
+
+/* TEXTAREA RESIZE ENABLED */
+.msg{
+    resize: both;
+}
+
+/* BUTTON – SAME STYLE AS ORIGINAL */
+.contactFormError {
+  margin-top: 0.75rem;
+  color: #f87171;
+  font-size: 0.9rem;
+}
+
+.contactFormSuccess {
+  margin-top: 0.75rem;
+  color: #34d399;
+  font-size: 0.9rem;
+}
+
+.submitBtn {
+  margin-top: 1.5rem;
+  align-self: flex-end;
+  background: linear-gradient(135deg, #00d4aa, #00b894);
+  color: #0d0d0d;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.7rem 2.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.submitBtn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 212, 170, 0.35);
+}
+
+.submitBtn:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}

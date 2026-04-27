@@ -1,0 +1,374 @@
+#intro {
+  min-height: calc(100vh - 6.5rem);
+  width: 100vw;
+  max-width: 85rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 3rem;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+#intro::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: -100px;
+  right: -50px;
+  background: radial-gradient(circle, rgba(0, 212, 170, 0.08) 0%, transparent 65%);
+  border-radius: 50%;
+  animation: introBgOrb 15s ease-in-out infinite;
+  pointer-events: none;
+}
+
+#intro::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  bottom: -80px;
+  left: -80px;
+  background: radial-gradient(circle, rgba(108, 92, 231, 0.06) 0%, transparent 65%);
+  border-radius: 50%;
+  animation: introBgOrb 18s ease-in-out infinite reverse;
+  animation-delay: -5s;
+  pointer-events: none;
+}
+
+@keyframes introBgOrb {
+  0%, 100% {
+    transform: translate(0, 0);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(20px, -30px);
+    opacity: 1;
+  }
+}
+
+/* LEFT CONTENT */
+.introContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: fadeSlideLeft 1s ease forwards;
+  position: relative;
+  z-index: 1;
+}
+
+.hello {
+  font-size: 1.8rem;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+.introText {
+  font-size: 3.5rem; /* BIG HERO TEXT */
+  font-weight: 800;
+  margin-top: 0.3rem;
+}
+
+.introName {
+  background: linear-gradient(90deg, #00d4aa, #00b894, #6c5ce7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+.introPara {
+  font-size: 1.15rem;
+  font-weight: 300;
+  line-height: 1.7;
+  margin-top: 1.2rem;
+  max-width: 520px;
+  opacity: 0.9;
+}
+
+/* BUTTONS */
+.introButtons {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  animation: fadeSlideLeft 1s ease 0.3s backwards;
+}
+
+.btn {
+  padding: 0.9rem 2rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  text-decoration: none;
+}
+
+.btnPrimary {
+  background: linear-gradient(135deg, #00d4aa, #00b894);
+  color: #0d0d0d;
+  box-shadow: 0 4px 20px rgba(0, 212, 170, 0.3);
+}
+
+.btnPrimary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0, 212, 170, 0.4);
+  background: linear-gradient(135deg, #00e6b8, #00d4aa);
+}
+
+.btnSecondary {
+  background: transparent;
+  color: #e0e0e0;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+}
+
+.btnSecondary:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.btnImg {
+  height: 1.2rem;
+}
+
+/* RIGHT IMAGE */
+.introImageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeSlideRight 1s ease forwards;
+  position: relative;
+  z-index: 1;
+}
+
+.introImageWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Profile image – keep sharp, no blur */
+.bg {
+  width: 400px;
+  height: 570px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  position: relative;
+  z-index: 2;
+  image-rendering: auto;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.bg:hover {
+  transform: translateZ(0) scale(1.03);
+}
+
+.introImageWrapper:hover .introRing {
+  border-color: rgba(0, 212, 170, 0.4);
+}
+
+/* Blurred glows BEHIND the image only */
+.introGlow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(50px);
+  opacity: 0.5;
+}
+
+.introGlow1 {
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(0, 212, 170, 0.5) 0%, transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: introGlowFloat 8s ease-in-out infinite;
+}
+
+.introGlow2 {
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(108, 92, 231, 0.4) 0%, transparent 70%);
+  top: 45%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  animation: introGlowFloat 10s ease-in-out infinite reverse;
+  animation-delay: -2s;
+}
+
+@keyframes introGlowFloat {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-50%, -48%) scale(1.15);
+    opacity: 0.7;
+  }
+}
+
+/* Animated ring around image */
+.introRing {
+  position: absolute;
+  width: 420px;
+  height: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50% 45% 55% 50% / 48% 52% 48% 52%;
+  border: 2px solid rgba(0, 212, 170, 0.25);
+  z-index: 1;
+  pointer-events: none;
+  animation: introRingPulse 4s ease-in-out infinite;
+}
+
+@keyframes introRingPulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(1);
+    border-color: rgba(0, 212, 170, 0.25);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.02);
+    border-color: rgba(108, 92, 231, 0.35);
+  }
+}
+
+/* Floating sparkles */
+.introSparkle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #00d4aa;
+  border-radius: 50%;
+  z-index: 3;
+  pointer-events: none;
+  animation: introSparkleFloat 3s ease-in-out infinite;
+  box-shadow: 0 0 12px rgba(0, 212, 170, 0.8);
+}
+
+.introSparkle1 {
+  top: 12%;
+  right: 8%;
+  animation-delay: 0s;
+}
+
+.introSparkle2 {
+  bottom: 25%;
+  left: 5%;
+  animation-delay: 1s;
+  background: #6c5ce7;
+  box-shadow: 0 0 12px rgba(108, 92, 231, 0.8);
+}
+
+.introSparkle3 {
+  bottom: 15%;
+  right: 15%;
+  animation-delay: 2s;
+}
+
+@keyframes introSparkleFloat {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-10px) scale(1.2);
+    opacity: 1;
+  }
+}
+
+/* ANIMATIONS */
+@keyframes fadeSlideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeSlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 900px) {
+  #intro {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 3rem 1.5rem;
+  }
+
+  .introText {
+    font-size: 8vw;
+  }
+
+  .introPara {
+    margin: 1rem auto;
+  }
+
+  .bg {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 1.2rem;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  }
+
+  .introRing {
+    width: 320px;
+    height: 320px;
+  }
+
+  .introGlow1 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .introGlow2 {
+    width: 160px;
+    height: 160px;
+  }
+
+  .introSparkle1 {
+    top: 8%;
+    right: 12%;
+  }
+
+  .introSparkle2 {
+    bottom: 20%;
+    left: 10%;
+  }
+
+  .introSparkle3 {
+    bottom: 10%;
+    right: 20%;
+  }
+}

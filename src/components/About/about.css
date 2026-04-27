@@ -1,0 +1,244 @@
+.about-section {
+  width: 100%;
+  min-height: 100vh;
+  background: #0a0a0c;
+  display: flex;
+  align-items: center;
+  padding: 5rem 2rem 6rem;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-section::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: -150px;
+  left: -100px;
+  background: radial-gradient(circle, rgba(0, 212, 170, 0.06) 0%, transparent 65%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.about-section::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  bottom: -100px;
+  right: -100px;
+  background: radial-gradient(circle, rgba(108, 92, 231, 0.05) 0%, transparent 65%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.about-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Header */
+.about-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  animation: aboutFadeIn 0.7s ease-out;
+}
+
+@keyframes aboutFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.about-title span {
+  background: linear-gradient(90deg, #00d4aa, #6c5ce7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about-title-underline {
+  width: 56px;
+  height: 4px;
+  background: linear-gradient(90deg, #00d4aa, #6c5ce7);
+  margin: 0 auto 1rem;
+  border-radius: 2px;
+}
+
+.about-tagline {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Bio */
+.about-bio {
+  margin-bottom: 3rem;
+  animation: aboutFadeIn 0.7s ease-out 0.1s backwards;
+}
+
+.about-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0;
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-description strong {
+  color: #00d4aa;
+  font-weight: 600;
+}
+
+/* Education */
+.about-education {
+  animation: aboutFadeIn 0.7s ease-out 0.2s backwards;
+}
+
+.about-edu-heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 1.5rem;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.edu-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.edu-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.edu-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  border-radius: 16px 16px 0 0;
+}
+
+.about-card-1::before {
+  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+}
+
+.about-card-2::before {
+  background: linear-gradient(90deg, #7c3aed, #a78bfa);
+}
+
+.about-card-3::before {
+  background: linear-gradient(90deg, #00d4aa, #06b6d4);
+}
+
+.edu-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 212, 170, 0.2);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+.edu-year {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.edu-card h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 0.35rem;
+}
+
+.edu-score {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+}
+
+.about-card-1 .edu-score { color: #fbbf24; }
+.about-card-2 .edu-score { color: #a78bfa; }
+.about-card-3 .edu-score { color: #00d4aa; }
+
+.edu-school {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.45;
+  margin: 0 0 0.4rem;
+}
+
+.edu-board {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .edu-cards {
+    grid-template-columns: 1fr;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  .about-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-section {
+    padding: 4rem 1.25rem 5rem;
+  }
+
+  .about-title {
+    font-size: 2.2rem;
+  }
+
+  .about-tagline {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+  }
+}

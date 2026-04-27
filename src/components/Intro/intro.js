@@ -5,6 +5,8 @@ import { Link } from 'react-scroll';
 import btnImg from '../../assets/hireMe.png';
 
 const Intro = () => {
+  const resumeUrl = `${process.env.PUBLIC_URL}/resume.pdf`;
+
   return (
     <section id="intro">
       <div className="introContent">
@@ -26,7 +28,13 @@ const Intro = () => {
               Hire Me
             </button>
           </Link>
-          <a href="/resume.pdf" download="Jayamuguntha_Resume.pdf" className="btn btnSecondary">
+          <a
+            href={resumeUrl}
+            download="Jayamuguntha_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btnSecondary"
+          >
             Download CV
           </a>
         </div>

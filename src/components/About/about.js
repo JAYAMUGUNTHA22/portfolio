@@ -10,7 +10,7 @@ const About = () => {
             About <span>Me</span>
           </h2>
           <div className="about-title-underline" />
-          <p className="about-tagline">Developer · Designer · Problem solver</p>
+          <p className="about-tagline">Developer · Designer</p>
         </div>
 
         <div className="about-bio">
@@ -27,14 +27,14 @@ const About = () => {
             <div className="edu-card about-card-1">
               <span className="edu-year">2021</span>
               <h4>SSLC</h4>
-              <p className="edu-score">70%</p>
+              <p className="edu-score">100%</p>
               <p className="edu-school">Vidhya Vikashini Matric Higher Secondary School, Tirupur</p>
               <span className="edu-board">State Board</span>
             </div>
             <div className="edu-card about-card-2">
               <span className="edu-year">2023</span>
               <h4>HSC</h4>
-              <p className="edu-score">93%</p>
+              <p className="edu-score">93.6%</p>
               <p className="edu-school">Vidhya Vikashini Matric Higher Secondary School, Tirupur</p>
               <span className="edu-board">State Board</span>
             </div>

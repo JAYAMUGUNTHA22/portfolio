@@ -28,7 +28,7 @@ const PROJECTS_DATA = [
     description: 'An AI-based planner that creates personalized day-wise travel itineraries. It recommends places to visit, stay, and explore based on user preferences.',
     technologies: ['React', 'AI/LLM', 'JavaScript'],
     githubLink: 'https://github.com/Monigasri/travel',
-    liveDemoLink: 'https://aitravelplanner-nine.vercel.app/home',
+    liveDemoLink: 'https://aitravelplanner-nine.vercel.app',
   },
   {
     id: 'fashion',

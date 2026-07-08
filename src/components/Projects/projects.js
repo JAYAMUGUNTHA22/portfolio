@@ -11,6 +11,37 @@ import './projects.css';
 
 const PROJECTS_DATA = [
   {
+    id: 'timetable',
+    title: 'College Timetable Generator',
+    image: timetable,
+    category: 'Full Stack',
+    description: 'An automated scheduling system that creates conflict-free timetables based on faculty availability, subjects, and room allocation. It simplifies academic planning by generating efficient and organized class schedules.',
+    technologies: ['REACT', 'NODE', 'MONGODB'],
+    githubLink: 'https://github.com/JAYAMUGUNTHA22/timetable',
+    liveDemoLink: 'https://timetable-voms.vercel.app/',
+  },
+  {
+    id: 'travel',
+    title: 'AI Travel Planner',
+    image: travel,
+    category: 'Full Stack',
+    description: 'An AI-based planner that creates personalized day-wise travel itineraries. It recommends places to visit, stay, and explore based on user preferences.',
+    technologies: ['React', 'AI/LLM', 'JavaScript'],
+    githubLink: 'https://github.com/Monigasri/travel',
+    liveDemoLink: 'https://aitravelplanner-nine.vercel.app/home',
+  },
+  {
+    id: 'fashion',
+    title: 'Fashion AI',
+    image: fashion,
+    category: 'Frontend',
+    description: 'An AI assistant that provides personalized outfit recommendations and styling advice. It enhances the shopping experience through smart fashion suggestions.',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'AI'],
+    githubLink: 'https://github.com/JAYAMUGUNTHA22/code-her',
+    liveDemoLink: '',
+  },
+  
+  {
     id: 'weather',
     title: 'Weather App',
     image: weather,
@@ -40,36 +71,7 @@ const PROJECTS_DATA = [
     githubLink: 'https://github.com/JAYAMUGUNTHA22/Coffee-Website',
     liveDemoLink: '',
   },
-  {
-    id: 'travel',
-    title: 'AI Travel Planner',
-    image: travel,
-    category: 'Full Stack',
-    description: 'An AI-based planner that creates personalized day-wise travel itineraries. It recommends places to visit, stay, and explore based on user preferences.',
-    technologies: ['React', 'AI/LLM', 'JavaScript'],
-    githubLink: 'https://github.com/Monigasri/travel',
-    liveDemoLink: '',
-  },
-  {
-    id: 'fashion',
-    title: 'Fashion AI',
-    image: fashion,
-    category: 'Frontend',
-    description: 'An AI assistant that provides personalized outfit recommendations and styling advice. It enhances the shopping experience through smart fashion suggestions.',
-    technologies: ['HTML', 'CSS', 'JavaScript', 'AI'],
-    githubLink: 'https://github.com/JAYAMUGUNTHA22/code-her',
-    liveDemoLink: '',
-  },
-  {
-    id: 'timetable',
-    title: 'College Timetable Generator',
-    image: timetable,
-    category: 'Full Stack',
-    description: 'An automated scheduling system that creates conflict-free timetables based on faculty availability, subjects, and room allocation. It simplifies academic planning by generating efficient and organized class schedules.',
-    technologies: ['REACT', 'NODE', 'MONGODB'],
-    githubLink: 'https://github.com/JAYAMUGUNTHA22/timetable',
-    liveDemoLink: 'https://timetable-voms.vercel.app/',
-  },
+  
 ];
 
 const Projects = () => {
